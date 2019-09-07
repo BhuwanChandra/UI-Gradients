@@ -27,6 +27,7 @@ function color(){
 
 
 function Change(){
+    document.getElementById("btn-code").textContent = "COPY CSS";
     var r = Math.ceil(Math.random()*9)*10;
     colr1 = color();
     colr2 = color();
@@ -56,6 +57,6 @@ function Copy(containerid) {
         range.selectNode(document.getElementById(containerid));
         window.getSelection().addRange(range);
         document.execCommand("copy");
-        alert("text copied");
+        document.getElementById("btn-code").textContent = "COPIED!";
     }
 }
